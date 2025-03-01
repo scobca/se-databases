@@ -28,4 +28,6 @@ VALUES
 
 INSERT INTO Meetings (human_id, council_id, meeting_date) 
 VALUES
-	(1, 1, '4123-01-01');
+	(1, 1, '2025-03-01 10:00:00'),
+	(2, 1, '2025-03-01 11:32:23'),
+	(3, 1, '2025-03-01 08:00:00');
