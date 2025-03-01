@@ -28,4 +28,4 @@ VALUES
 
 INSERT INTO Meetings (human_id, council_id, meeting_date) 
 VALUES
-	(1, 1, 4123-01-01);
+	(1, 1, '4123-01-01');
