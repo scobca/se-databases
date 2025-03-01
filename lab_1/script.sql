@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS Roles (
 	id SERIAL PRIMARY KEY,
-	echo_description TEXT NOT NULL
+	description TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Culture (
