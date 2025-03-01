@@ -33,8 +33,8 @@ CREATE TABLE IF NOT EXISTS Council (
 CREATE TABLE IF NOT EXISTS Meetings (
 	id SERIAL PRIMARY KEY,
 	human_id INTEGER NOT NULL,
-	counsil_id INTEGER NOT NULL,
+	council_id INTEGER NOT NULL,
 	meeting_date DATE NOT NULL,
 	CONSTRAINT fk_human FOREIGN KEY (human_id) REFERENCES Human(id),
-	CONSTRAINT fk_counsil FOREIGN KEY (counsil_id) REFERENCES Counsil(id)
+	CONSTRAINT fk_council FOREIGN KEY (council_id) REFERENCES Council(id)
 );
