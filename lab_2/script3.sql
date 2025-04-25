@@ -10,8 +10,8 @@ SELECT EXISTS (
          Н_ЛЮДИ
   ON
         Н_УЧЕНИКИ.ЧЛВК_ИД = Н_ЛЮДИ.ИД
-  WHERE
-        Н_ПЛАНЫ.ФО_ИД = 2 
-  AND   
-        AGE(CURRENT_DATE, Н_ЛЮДИ.ДАТА_РОЖДЕНИЯ) <  INTERVAL '20 year'
+  WHERE 
+        Н_ПЛАНЫ.ФО_ИД = 2
+  AND
+        AGE(CURRENT_DATE, Н_ЛЮДИ.ДАТА_РОЖДЕНИЯ) <  INTERVAL '20 year' 
 );
