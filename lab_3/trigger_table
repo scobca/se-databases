@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS MeetingLogs (
+    id SERIAL PRIMARY KEY,
+    meeting_id INTEGER NOT NULL,
+    log_time TIMESTAMP NOT NULL DEFAULT NOW(),
+    message TEXT NOT NULL
+);
