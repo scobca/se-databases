@@ -3,17 +3,22 @@ CREATE TABLE IF NOT EXISTS Roles (
 	description TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS Culture (
-	id SERIAL PRIMARY KEY,
-	description TEXT NOT NULL
+CREATE TABLE Town (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS Town (
-	id SERIAL PRIMARY KEY,
-	name VARCHAR(255) NOT NULL,
-	description TEXT NOT NULL,
-	culture_id INTEGER UNIQUE NOT NULL,
-	CONSTRAINT fk_culture FOREIGN KEY (culture_id) REFERENCES Culture(id)
+CREATE TABLE Culture (
+    id SERIAL PRIMARY KEY,
+    description TEXT NOT NULL
+);
+
+CREATE TABLE TownCulture (
+    town_id INTEGER PRIMARY KEY,
+    culture_id INTEGER UNIQUE NOT NULL,
+    CONSTRAINT fk_town FOREIGN KEY (town_id) REFERENCES Town(id) ON DELETE CASCADE,
+    CONSTRAINT fk_culture FOREIGN KEY (culture_id) REFERENCES Culture(id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS Human (
